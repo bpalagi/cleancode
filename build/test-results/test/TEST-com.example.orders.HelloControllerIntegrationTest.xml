@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.orders.HelloControllerIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-01T00:49:00" hostname="brad" time="0.993">
+  <properties/>
+  <testcase name="getHello()" classname="com.example.orders.HelloControllerIntegrationTest" time="0.993"/>
+  <system-out><![CDATA[19:48:58.059 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orders.HelloControllerIntegrationTest]: HelloControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:48:58.203 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orders.OrdersApplication for test class com.example.orders.HelloControllerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-09-30T19:48:58.644-05:00  INFO 11599 --- [orders] [    Test worker] c.e.o.HelloControllerIntegrationTest     : Starting HelloControllerIntegrationTest using Java 21.0.4 with PID 11599 (started by brad in /home/brad/cleancode)
+2024-09-30T19:48:58.646-05:00  INFO 11599 --- [orders] [    Test worker] c.e.o.HelloControllerIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2024-09-30T19:48:59.812-05:00  INFO 11599 --- [orders] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-09-30T19:48:59.827-05:00  INFO 11599 --- [orders] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-30T19:48:59.828-05:00  INFO 11599 --- [orders] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-30T19:48:59.879-05:00  INFO 11599 --- [orders] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-30T19:48:59.881-05:00  INFO 11599 --- [orders] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2024-09-30T19:49:00.595-05:00  INFO 11599 --- [orders] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-30T19:49:00.674-05:00  INFO 11599 --- [orders] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 44729 (http) with context path '/'
+2024-09-30T19:49:00.700-05:00  INFO 11599 --- [orders] [    Test worker] c.e.o.HelloControllerIntegrationTest     : Started HelloControllerIntegrationTest in 2.333 seconds (process running for 3.788)
+2024-09-30T19:49:01.670-05:00  INFO 11599 --- [orders] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-30T19:49:01.671-05:00  INFO 11599 --- [orders] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-30T19:49:01.673-05:00  INFO 11599 --- [orders] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/brad/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
