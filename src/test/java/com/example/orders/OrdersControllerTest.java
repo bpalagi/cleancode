@@ -13,6 +13,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import com.example.orders.model.Order;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 public class OrdersControllerTest {
@@ -22,8 +24,21 @@ public class OrdersControllerTest {
 
 	@Test
 	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+
+		String expectedOrder = """
+				{
+					id: 1234,
+					itemId: 5678,
+					customerId: 9012,
+					date: "2021-09-01",
+					total: 100,
+					shippingAddress: "123 Main St",
+					status: "Shipped"
+				}
+				""";
+
+		mvc.perform(MockMvcRequestBuilders.get("/1234").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+				.andExpect(content().json(expectedOrder));
 	}
 }
