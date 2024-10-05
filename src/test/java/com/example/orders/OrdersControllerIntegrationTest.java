@@ -17,7 +17,9 @@ public class OrdersControllerIntegrationTest {
 
     @Test
     public void getHello() throws Exception {
-        // ResponseEntity<String> response = template.getForEntity("/", String.class);
-        // assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
+        String expectedOrder = "{\"id\":1234,\"itemId\":null,\"customerId\":1122,\"date\":null,\"total\":null,\"shippingAddress\":null,\"status\":null}";
+
+        ResponseEntity<String> response = template.getForEntity("/orders/1234", String.class);
+        assertThat(response.getBody()).isEqualTo(expectedOrder);
     }
 }

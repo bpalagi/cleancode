@@ -2,3 +2,4 @@ HELP.md
 .gradle
 build/
 .vsvode
+.vscode/

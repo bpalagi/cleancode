@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/orders")
 @RequiredArgsConstructor
 public class OrdersController {
-
 	private final OrdersService ordersService;
 
 	@GetMapping("/{id}")
