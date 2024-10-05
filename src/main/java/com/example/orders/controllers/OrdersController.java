@@ -20,5 +20,4 @@ public class OrdersController {
 	public Order getOrderById(@PathVariable Long id) {
 		return ordersService.findById(id);
 	}
-
 }
