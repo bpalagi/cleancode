@@ -1,5 +1,6 @@
 package com.example.orders.controllers;
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,12 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/orders")
 @RequiredArgsConstructor
+@Validated
 public class OrdersController {
 	private final OrdersService ordersService;
 
 	@GetMapping("/{id}")
-	public Order getOrderById(@PathVariable Long id) {
-		return ordersService.findById(id);
+	public Order getOrderById(@PathVariable Integer id) {
+		return ordersService.findOrderById(id);
 	}
 }

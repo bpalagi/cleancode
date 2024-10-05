@@ -4,5 +4,5 @@ import com.example.orders.model.Order;
 
 public interface OrdersService {
 
-  Order findById(Long id);
+  Order findOrderById(Integer id);
 }
