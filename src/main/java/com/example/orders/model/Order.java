@@ -19,10 +19,10 @@ public class Order{
 
   @Id
   private Integer id;
-  private Long itemId;
-  private Long customerId;
+  private Integer itemId;
+  private Integer customerId;
   private LocalDateTime orderDate;
-  private Long total;
+  private Double total;
   private String shippingAddress;
   private String shippingStatus;
 

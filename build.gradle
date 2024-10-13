@@ -24,6 +24,7 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core:10.18.2'
 	implementation 'org.postgresql:postgresql:42.1.4'
 	implementation 'javax.persistence:javax.persistence-api:2.2'
+	implementation 'org.springframework.boot:spring-boot-docker-compose:3.3.4'
 
 	compileOnly 'org.projectlombok:lombok:1.18.34'
 	annotationProcessor 'org.projectlombok:lombok:1.18.34'

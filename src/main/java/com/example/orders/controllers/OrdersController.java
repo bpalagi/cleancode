@@ -1,5 +1,6 @@
 package com.example.orders.controllers;
 
+import java.util.List;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,11 @@ import lombok.RequiredArgsConstructor;
 public class OrdersController {
 	private final OrdersService ordersService;
 
+	@GetMapping("/")
+	public List<Order> getAllOrders() {
+		return ordersService.findAllOrders();
+	}
+	
 	@GetMapping("/{id}")
 	public Order getOrderById(@PathVariable Integer id) {
 		return ordersService.findOrderById(id);
