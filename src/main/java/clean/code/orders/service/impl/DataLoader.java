@@ -1,4 +1,4 @@
-package clean.code.orders;
+package clean.code.orders.service.impl;
 
 import org.springframework.stereotype.Component;
 
@@ -17,7 +17,7 @@ public class DataLoader {
 
   @PostConstruct
   private void loadData() {
-    orderRepository.save(Order.builder().product("hammer").build());
+    orderRepository.save(Order.builder().product("goggles").build());
     orderRepository.save(Order.builder().product("shovel").build());
   }
   
