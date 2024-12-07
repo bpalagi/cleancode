@@ -1,5 +1,6 @@
 package clean.code.orders.model;
 
+import clean.code.orders.model.dto.CreateOrderDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,5 +24,10 @@ public class Order {
 
   @Column(name = "product")
   private String product;
+
+  // can implement mapstruct in future
+  public CreateOrderDto toDto() {
+    return new CreateOrderDto(product);
+  }
 
 }

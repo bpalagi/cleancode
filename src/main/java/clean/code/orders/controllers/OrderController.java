@@ -10,8 +10,11 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping()
@@ -21,13 +24,19 @@ public class OrderController {
   private final OrderService orderService;
 
   @GetMapping("/orders")
-  public ResponseEntity<List<Order>> getOrders() {
-    List<Order> allOrders = orderService.getOrders();
+  public ResponseEntity<List<CreateOrderDto>> getOrders() {
+    Logger logger = LoggerFactory.getLogger(OrderController.class);
+
+    List<CreateOrderDto> allOrders = orderService.getOrders().stream().map(Order::toDto).toList();
+    if (allOrders == null || allOrders.isEmpty()) {
+        logger.warn("No orders found");
+        return ResponseEntity.noContent().build();
+    }
     return ResponseEntity.ok(allOrders);
   }
   
   @PostMapping("/create-order")
-    public ResponseEntity<CreateOrderDto> createOrder(CreateOrderDto orderDto) {
+    public ResponseEntity<CreateOrderDto> createOrder(@RequestBody CreateOrderDto orderDto) {
         orderService.createOrder(orderDto);
         return ResponseEntity.ok(orderDto);
     }
